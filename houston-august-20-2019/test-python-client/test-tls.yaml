@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test-tls 
+  labels:
+    name: test-tls
+spec:
+  containers:
+  - name: test-tls
+    image: jmimick/test
+    env:
+    - name: SECONDS_TO_PAUSE
+      value: '0.05' 
+    - name: MONGODB_URI
+      value: "mongodb+srv://mongodb-in-k8s-tls-svc.mongodb.svc.cluster.local/test?ssl=true&replicaSet=mongodb-in-k8s-tls&tlsCAFile=/run/secrets/kubernetes.io/serviceaccount/ca.crt"

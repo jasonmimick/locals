@@ -1,0 +1,10 @@
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: "mongodb-in-kubernetes-cloud-mgr-admin"
+  namespace: mongodb
+stringData:
+  user: "jaavtbal"
+  publicApiKey: "adb6f300-2697-4c52-892c-630754611571"
+

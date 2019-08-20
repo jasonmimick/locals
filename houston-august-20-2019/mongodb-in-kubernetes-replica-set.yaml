@@ -1,0 +1,13 @@
+---
+apiVersion: mongodb.com/v1
+kind: MongoDB
+metadata:
+  name: mongodb-in-k8s
+  namespace: mongodb
+spec:
+  members: 3
+  version: 4.0.10
+  project: mongodb-in-kubernetes-cloud-mgr-project
+  credentials: mongodb-in-kubernetes-cloud-mgr-admin
+  type: ReplicaSet
+  persistent: true
